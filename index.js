@@ -1,3 +1,43 @@
+//funções
+
+(function (x1, x2, operator) { //função anônima
+    
+    return console.log(eval(`${x1} ${operator} ${x2}`)); //retorna o valor da expressão fornecida
+
+})(1, 2, "+")
+
+function somar (x1, x2, operator) {   //função normal
+    
+    return eval(`${x1} ${operator} ${x2}`); //retorna o valor da expressão fornecida
+
+}
+
+let calc = (x1, x2, operator) => { //exemplo de arrow function /*arrow*/ =>
+
+    return eval(`${x1} ${operator} ${x2}`);
+
+}
+
+let resultado = somar(1, 2, "-");
+console.log(resultado);
+
+resultado = calc(3, 5, "*");
+console.log(resultado);
+
+//eventos
+
+window.addEventListener('focus', event=> { //toda vez que focar na janela irá realizar uma ação
+    //event listener é uma procedure que espera um evento acontecer
+    console.log("focus");
+
+});
+
+
+
+
+
+//variáveis e vocabulário básico
+
 var helloWorld = "Hello World!"; //var declara variáveis
 //let para declarar variáveis num escopo de código
 const pi = 3.14//const para declarar constantes
