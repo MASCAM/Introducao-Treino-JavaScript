@@ -17,7 +17,7 @@ console.log(a == b && typeof a == 'string');
 console.log(a == b || typeof b == 'string');   //OR e tipo de variável
 console.log(a == b || typeof a == 'string')
 
-let cor = "verde";
+let cor = "verde"; //exemplos de comparações
 if (cor === "verde") {
 
     console.log("siga");
@@ -33,5 +33,42 @@ if (cor === "verde") {
 } else {
 
     console.log("erro");
-    
+
+}
+
+cor = "azul"; //exemplo de switch
+
+switch (cor) {
+
+    case "verde":
+        console.log("siga");
+        break;
+
+    case "amarelo":
+        console.log("atenção");
+        break;
+
+    case "vermelho":
+        console.log("pare");
+        break;
+
+    default:
+        console.log("erro");
+
+}
+
+//break para a execução
+//continue ignora a execução atual e vai pra próxima iteração
+
+let n = 5;
+
+for (let i = 0; i <= 10; i++) { //tabuada do 5
+
+    console.log(`
+    ${i} X ${n} = ${i*n}
+    `) ; //$ para expressões matemáticas no output
+    //crase interpreta como texto e $ como template (formato)  
+    //entre crases você pode até quebrar em várias linhas
+    console.log(i + " X " + n + " = " + (i * n)); //forma concatenada
+    //basicamente tudo que está fora das chaves do $ é interpretado como texto quando entre crases
 }
