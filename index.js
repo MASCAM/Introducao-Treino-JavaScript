@@ -1,4 +1,4 @@
-var helloWorld = "Hello World!"; //var declara variuáveis
+var helloWorld = "Hello World!"; //var declara variáveis
 //let para declarar variáveis num escopo de código
 const pi = 3.14//const para declarar constantes
 //array variável com índice - vetores
