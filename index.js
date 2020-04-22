@@ -1,4 +1,4 @@
-//funções
+/*funções*/
 
 (function (x1, x2, operator) { //função anônima
     
@@ -24,19 +24,87 @@ console.log(resultado);
 resultado = calc(3, 5, "*");
 console.log(resultado);
 
-//eventos
+/*eventos*/
 
 window.addEventListener('focus', event=> { //toda vez que focar na janela irá realizar uma ação
     //event listener é uma procedure que espera um evento acontecer
     console.log("focus");
-
+    //listener, adicione uma escuta para um evento
 });
 
+document.addEventListener('click', event => { //toda vez que clicar no documento, a procedure realizará uma ação
+    //window é a janela enquanto o document é o site
+    console.log("click");
+    //window manipula toda a aplicação
+    //window.focus window.open window.close são diferentes comandos utilizáveis
+})
 
+/*classes*/
 
+let agora = new Date(); //classe já desenvolvida pronta para ser utilizada
+//a data é armazenada em formato de time stamp, quantidade de milissegundos desde 1 de janeiro de 1970
+console.log("Data");
+console.log(agora);
+console.log(agora.getDate()); //pega cada dado do formato da data
+console.log(agora.getMonth());
+console.log(agora.getYear());
 
+console.log("Data em formato local");
+console.log(agora.toLocaleDateString("pt-BR")); //método de uma classe
 
-//variáveis e vocabulário básico
+let celular = function() { //exemplo de como criar classe
+
+    this.cor = "prata"; //this sempre faz referencia a objetos enquanto o ponto faz referencia a um atributo especifico do objeto
+    this.ligar = function() {
+        console.log("Uma ligação");
+        return "ligando";
+    }
+
+}
+
+let objeto = new celular();
+
+console.log(objeto.cor);
+console.log(objeto.ligar());
+
+class casa { //exemplo de como criar classe com método construtor
+
+    constructor(){
+        this.cor = "vermelha";
+    }
+    entrar(){
+        console.log("entrando na casa");
+        return "entrou";
+    }
+
+}
+
+let house = new casa();
+
+console.log(house);
+console.log(house.entrar());
+
+/*array*/
+
+let carros = ["palio 98", "toro", "uno", 10, true, new Date(), function(){}];
+//índice começa em 0
+//formato de vetor em JS
+console.log(carros); //imprime o que está armazenado no array e mostra a quantidade de elementos
+console.log("Quantidade de itens no vetor: " + carros.length); //imprime somente a quantidade de itens
+//é possível também imprimir somente um elemento do array:
+console.log("O primeiro elemento e que está na posição 0 do array é: " + carros[0]);
+console.log("O ano atual na data que está armazenada no array é: " + carros[5].getFullYear());
+//pega o valor dentro da classe armazenada no array
+
+//para percorrer o array e fazer algo forEach()
+
+carros.forEach(function(value, index){
+    //para cada um dos elementos da array a função recebe o valor e o índice do elemento
+    console.log(`O valor do elemento ${index} da função é: ${value}`);
+    //e a função realiza alguma ação com esses valores
+});
+
+/*variáveis e vocabulário básico*/
 
 var helloWorld = "Hello World!"; //var declara variáveis
 //let para declarar variáveis num escopo de código
