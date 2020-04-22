@@ -5,3 +5,8 @@ const pi = 3.14//const para declarar constantes
 //funções de conversão parseInt parseFloat toString
 console.log(helloWorld); //escreve olá mundo no console,
 alert(helloWorld);       //console.log escreve as informações no console do navegador e alert num popup
+
+let a = 10;
+const b = "10";
+console.log(a == b); //validação ignora o tipo de dado
+console.log(a === b); //3 === valida também o tipo de dado
